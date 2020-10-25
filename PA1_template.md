@@ -1,10 +1,6 @@
 ---
 title: "Project 1"
-author: "Roshan"
-date: "10/26/2020"
-output:
-  html_document: default
-  pdf_document: default
+
 ---
 
 ```{r setup, include=FALSE}
