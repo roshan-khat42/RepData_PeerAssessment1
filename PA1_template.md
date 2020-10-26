@@ -180,7 +180,7 @@ activity$weekday <- ifelse(weekdays(activity$date) == "Saturday" | weekdays(acti
 ```
 
 
-### 2.
+### 2
 
 ```{r}
 g <- ggplot(activity, aes(x = interval, y = steps))
