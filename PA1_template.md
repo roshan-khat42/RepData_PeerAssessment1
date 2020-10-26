@@ -32,6 +32,7 @@ total_steps_per_day <- aggregate(activity_clean["steps"],
                    sum)
 total_steps_per_day
 ```
+![](instructions_fig/img1.png)
 
 ### 2. 
 ```{r}
