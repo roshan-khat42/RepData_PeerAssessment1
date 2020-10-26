@@ -85,6 +85,8 @@ contains the maximum number of steps?
 ```{r}
 avg_steps_five_mins$interval[which.max(avg_steps_five_mins$steps)]
 ```
+![](instructions_fig/img6.png)
+
 
 835, 5-minute interval, on average across all the days in the 
 data set, contains the maximum number of steps.
@@ -96,6 +98,8 @@ data set, contains the maximum number of steps.
 ```{r}
 sum(is.na(activity))
 ```
+![](instructions_fig/img7.png)
+
 
 Total number of missing rows: 2304
 
@@ -122,6 +126,8 @@ activity_new <- fill_missing(activity, average_steps_per_day)
 
 sum(is.na(activity_new))
 ```
+![](instructions_fig/img8.png)
+
 
 ### 4. 
 
@@ -131,6 +137,8 @@ total_steps_per_day <- aggregate(activity_new["steps"],
                    sum)
 head(total_steps_per_day)
 ```
+![](instructions_fig/img9.png)
+
 
 ```{r}
 g <- ggplot(total_steps_per_day, aes(x = steps))
@@ -138,6 +146,8 @@ g <- g + geom_histogram() + stat_bin(aes(y=..count.., label=..count..),
                                 geom="text", vjust=-.5)
 g + ggtitle("Histogram of total steps per day")
 ```
+![](instructions_fig/img10.png)
+
 
 ```{r}
 average_steps_per_day <- aggregate(activity_new["steps"], 
@@ -145,6 +155,8 @@ average_steps_per_day <- aggregate(activity_new["steps"],
                    mean)
 head(average_steps_per_day)
 ```
+![](instructions_fig/img11.png)
+
 
 ```{r}
 median_steps_per_day <- aggregate(activity_new["steps"], 
@@ -152,6 +164,8 @@ median_steps_per_day <- aggregate(activity_new["steps"],
                    median)
 median_steps_per_day
 ```
+![](instructions_fig/img12.png)
+
 
 The imputed dates now have different median values, also the mean
 of each day has changed after imputing missing values.
@@ -173,4 +187,6 @@ g <- ggplot(activity, aes(x = interval, y = steps))
 g <- g + geom_line() + facet_grid(vars(weekday))
 g
 ```
+![](instructions_fig/img13.png)
+
 
