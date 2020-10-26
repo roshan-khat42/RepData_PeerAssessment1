@@ -43,6 +43,8 @@ g <- g + geom_histogram() + stat_bin(aes(y=..count.., label=..count..),
                                 geom="text", vjust=-.5)
 g + ggtitle("Histogram of total steps per day")
 ```
+![](instructions_fig/img2.png)
+
 
 ### 3. 
 
@@ -52,6 +54,8 @@ average_steps_per_day <- aggregate(activity_clean["steps"],
                    mean)
 average_steps_per_day
 ```
+![](instructions_fig/img3.png)
+
 
 ```{r}
 median_steps_per_day <- aggregate(activity_clean["steps"], 
@@ -59,6 +63,8 @@ median_steps_per_day <- aggregate(activity_clean["steps"],
                    median)
 median_steps_per_day
 ```
+![](instructions_fig/img4.png)
+
 
 ## What is the average daily activity pattern?
 
